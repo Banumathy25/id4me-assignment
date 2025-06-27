@@ -100,6 +100,12 @@ npx playwright test --workers=1
 npx playwright test --headed
 ```
 
+### Run with UI (debug mode):
+
+```bash
+npx playwright test --debug
+```
+
 ### Show HTML report:
 
 ```bash
