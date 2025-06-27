@@ -5,7 +5,8 @@ This project automates form validation tests for the signup page at [https://sig
 
 It covers both positive and negative test cases, dynamic field behavior, and responsiveness across desktop and mobile devices.
 
-![image](https://github.com/user-attachments/assets/b821c41f-88ab-4b70-8833-83f4332afdfe)
+![image](https://github.com/user-attachments/assets/826f47ce-dfc2-4e3c-af61-eb3bf8ac9124)
+
 
 ## What’s Tested
 
