@@ -25,7 +25,6 @@ exports.SignupPage = class SignupPage extends BasePage {
     this.ref_source = this.frameLocator.locator('select[name="referral_source"]');
     this.agreement1 = this.frameLocator.locator('//span[text()="I agree to receive other communications from iD4me Find Main."]');
     this.agreement2 = this.frameLocator.locator('//*[text()="I agree to iD4me "]')
-    this.alert_success = page.locator('.alert.alert-success');
     this.email_spec = 'test+id4me#user@mycompany.com';
 
     this.defaultValues = {
@@ -187,10 +186,6 @@ exports.SignupPage = class SignupPage extends BasePage {
     this.click_submit();
   }
 
-  async checkAlertSuccess() {
-    await this.assertVisible(this.alert_success);
-  }
-
   async checkStateFieldHidden(field_name) {
     await expect(this.state).toBeVisible();
     console.log('State option is visible');
@@ -234,6 +229,12 @@ exports.SignupPage = class SignupPage extends BasePage {
     await this.email.fill(this.email_spec);
     const list_errors = await this.getListErrorMessages();
     await expect(list_errors).toHaveLength(0);
-
+  }
+  async passMaskedWithDots() {
+    this.scrollDown();
+    this.scrollDown();
+    await this.waitForVisible(this.password);
+    await this.password.type(process.env.PASSWORD, { delay: 100 });
+    await expect(this.password).toHaveAttribute('type', 'password');
   }
 };

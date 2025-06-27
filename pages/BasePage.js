@@ -66,5 +66,4 @@ class BasePage {
     await expect(locator, message).toBeHidden();
   }
 }
-
 module.exports = { BasePage };

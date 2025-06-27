@@ -9,21 +9,23 @@ The below id4me test will check the following positive scenarios:
 const { test, expect } = require('@playwright/test');
 const { SignupPage } = require('../pages/SignupPage.js');
 const { BasePage } = require('../pages/BasePage.js');
+const { SuccessPage } = require('../pages/SuccessPage.js');
 require('dotenv').config();
 
 test.describe('Signup Form - Positive Scenarios', () => {
     let signupPage;
     let basePage;
-
+    let successPage;
     test.beforeEach(async ({ page }) => {
         basePage = new BasePage(page);
         signupPage = new SignupPage(page);
+        successPage = new SuccessPage(page)
         await basePage.openMerchant();
     });
 
     test('should fill out all fields and submit successfully', async () => {
         await signupPage.fillFormAllFields();
-        await signupPage.checkAlertSuccess();
+        await successPage.checkAlertSuccess();
         console.log("Hence the id4me form is submitted successfully");
     });
 

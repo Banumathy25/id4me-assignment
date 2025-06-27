@@ -1,5 +1,6 @@
 /*
 - Validates state/region dropdown behavior
+- Validates password is not visible and masked as dots
 */
 const { test, expect } = require('@playwright/test');
 const { SignupPage } = require('../pages/SignupPage.js');
@@ -17,5 +18,9 @@ test.describe('Signup Form - Dynamic Field Behavior', () => {
   test('should update State/Region options after selecting a State', async ()=>{
     await signupPage.checkStateFieldHidden('New South Wales (NSW)');
     console.log('it selects the state as expected');
+  });
+  test('password field should be masked as dots', async ()=>{
+    await signupPage.passMaskedWithDots();
+    console.log('password is present and masked as dots');
   });
 });

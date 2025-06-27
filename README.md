@@ -39,6 +39,7 @@ It covers both positive and negative test cases, dynamic field behavior, and res
 
 ### Dynamic Behavior
 - Validates state/region dropdown behavior
+- Validates password is not visible and masked as dots
 
 ### Cross-device Responsiveness
 - Tests run with both **desktop** and **mobile** viewports (375x667 for mobile)
