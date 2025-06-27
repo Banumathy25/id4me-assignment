@@ -129,6 +129,14 @@ These are already used in `signup.dynamicFields.spec.js`.
 - No country dropdown exists on the current form (as of latest test).
 - Some animations or third-party form scripts may delay element visibility slightly.
 - CAPTCHA or rate-limiting is not handled in automation (none observed yet).
+- The form is embedded inside an iframe, which may sometimes cause locator stability issues due to dynamic content loading delays.
+- Validation error messages are checked against static text; if the application changes message wording, tests will fail and require updates.
+- Mobile viewport tests cover only basic screen sizes and do not include all device-specific quirks or orientations.
+- Currently, only key positive and negative scenarios and few edge cases are automated; exhaustive edge cases such as internationalization or accessibility are not covered yet.
+- Password strength validation is limited to predefined criteria and does not test all possible password rules or backend validation.
+- Integration attempt to CI/CD has been m ade through github actions but can be treated hypothetical as of now.
+- Tests assume stable network and environment; flaky tests may occur due to asynchronous form loading or slow responses.
+- API/backend validations related to sign-up success are not tested; the focus is purely on front-end UI behavior.
 
 ## Tools Used
 
