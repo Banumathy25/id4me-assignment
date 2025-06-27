@@ -7,7 +7,7 @@ const { SignupPage } = require('../pages/SignupPage.js');
 const { BasePage } = require('../pages/BasePage.js');
 require('dotenv').config();
 
-test.describe('Signup Form - Dynamic Field Behavior', () => {
+test.describe('Signup Form - Edge Case Scenarios', () => {
     let signupPage;
   let basePage;
   test.beforeEach(async ({ page }) => {
