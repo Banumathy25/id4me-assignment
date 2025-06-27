@@ -5,24 +5,7 @@ This project automates form validation tests for the signup page at [https://sig
 
 It covers both positive and negative test cases, dynamic field behavior, and responsiveness across desktop and mobile devices.
 
-├── tests/ # All test specs (positive, negative, dynamic)
-│ ├── signup.positive.spec.js
-│ ├── signup.negative.spec.js
-│ ├── signup.dynamicFields.spec.js
-│ ├── signup.mobileDesktop.spec.js
-│ └── signup.edgeCases.spec.js
-│
-├── pages/ # Page Object Model files
-│ ├── BasePage.js
-│ └── SignupPage.js
-│
-├── utils/ # Utility functions and helpers
-│ └── helpers.js
-│
-├── .env # Contains BASE_URL
-├── playwright.config.js
-├── package.json
-└── README.md 
+<pre> ``` ├── tests/ # All test specs (positive, negative, dynamic) │ ├── signup.positive.spec.js │ ├── signup.negative.spec.js │ ├── signup.dynamicFields.spec.js │ ├── signup.mobileDesktop.spec.js │ └── signup.edgeCases.spec.js │ ├── pages/ # Page Object Model files │ ├── BasePage.js │ └── SignupPage.js │ ├── utils/ # Utility functions and helpers │ └── helpers.js │ ├── .env # Contains BASE_URL ├── playwright.config.js ├── package.json └── README.md ``` </pre>
 
 ## What’s Tested
 
