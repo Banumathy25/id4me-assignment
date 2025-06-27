@@ -90,12 +90,25 @@ Then update the `.env` file as needed (for example, `BASE_URL`, `PASSWORD`).
 
 ```bash
 npx playwright test
+
+```
+### Run all tests in one browser:
+
+```bash
+npx playwright test --project=chromium
 ```
 
 ### Run specific test file:
 
 ```bash
 npx playwright test tests/signup.positive.spec.js
+```
+
+
+### Run specific test file sequentially: (will be slow )
+
+```bash
+npx playwright test --workers=1
 ```
 
 ### Run with UI (headed mode):
