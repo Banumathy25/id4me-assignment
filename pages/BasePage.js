@@ -5,9 +5,6 @@ class BasePage {
   constructor(page) {
     this.page = page;
   }
-  // async openMerchant() {
-  //   await this.page.goto(process.env.BASE_URL);
-  // }
   async openMerchant(viewport = { width: 1920, height: 1080 }) {
     await this.page.goto(process.env.BASE_URL);
     await this.page.setViewportSize(viewport);
