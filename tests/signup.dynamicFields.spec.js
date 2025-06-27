@@ -11,7 +11,8 @@ test.describe('Signup Form - Dynamic Field Behavior', () => {
     signupPage = new SignupPage(page);
     await basePage.openMerchant();
   });
-  test('should update State/Region options after selecting a country', async ()=>{
+  test('should update State/Region options after selecting a State', async ()=>{
     await signupPage.checkStateFieldHidden(process.env.STATEFIELD);
+    console.log('it selects the state as expected');
   });
 });

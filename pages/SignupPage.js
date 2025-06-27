@@ -20,9 +20,6 @@ exports.SignupPage = class SignupPage extends BasePage {
     this.errorMessages = this.frameLocator.locator(
       '//label[contains(text(), "required field") or contains(text(), "formatted correctly") or contains(text(), "do not match") or contains(text(), "may only contain numbers")]'
     );
-    // this.errorMessages = this.frameLocator.locator('//label[text()="Please complete this required field."]');
-    // this.errorMsgEmail = this.frameLocator.locator('//label[text()="Email must be formatted correctly."]');
-    // this.errorMsgPassword = this.frameLocator.locator('//label[text()="Your password do not match"]');
     this.password_checks = this.frameLocator.locator('ul.custom-password-validator.no-list.inputs-list>li>span');
     this.password_checks2 = this.frameLocator.locator('ul.custom-password-validator.no-list.inputs-list>li>i');
     this.ref_source = this.frameLocator.locator('select[name="referral_source"]');
@@ -188,6 +185,7 @@ exports.SignupPage = class SignupPage extends BasePage {
 
   async checkStateFieldHidden(field_name) {
     await expect(this.state).toBeVisible();
+    console.log('State option is visible');
     await this.scrollToLocator(this.state);
     await this.state.selectOption(field_name);
     const stateOptions = await this.state.locator('option').allTextContents();
