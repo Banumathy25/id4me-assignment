@@ -1,3 +1,11 @@
+/*
+The below id4me test will check the following positive scenarios:
+- Successful form submission with all required fields
+- Page title and URL verification
+- Password field meets all validation criteria
+*/
+
+
 const { test, expect } = require('@playwright/test');
 const { SignupPage } = require('../pages/SignupPage.js');
 const { BasePage } = require('../pages/BasePage.js');

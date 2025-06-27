@@ -1,3 +1,11 @@
+/*
+The below id4me test will check the following negative scenarios:
+- Submitting the form with empty required fields
+- Invalid email format triggers error
+- Mismatched passwords show validation error
+- Password field highlights on invalid input
+*/
+
 const { test, expect } = require('@playwright/test');
 const { SignupPage } = require('../pages/SignupPage.js');
 const { BasePage } = require('../pages/BasePage.js');

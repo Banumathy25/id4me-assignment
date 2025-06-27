@@ -1,3 +1,6 @@
+/*
+- Validates state/region dropdown behavior
+*/
 const { test, expect } = require('@playwright/test');
 const { SignupPage } = require('../pages/SignupPage.js');
 const { BasePage } = require('../pages/BasePage.js');

@@ -5,25 +5,24 @@ This project automates form validation tests for the signup page at [https://sig
 
 It covers both positive and negative test cases, dynamic field behavior, and responsiveness across desktop and mobile devices.
 
-## Project Structure
-
-```
-id4me-assignment/
+├── tests/ # All test specs (positive, negative, dynamic)
+│ ├── signup.positive.spec.js
+│ ├── signup.negative.spec.js
+│ ├── signup.dynamicFields.spec.js
+│ ├── signup.mobileDesktop.spec.js
+│ └── signup.edgeCases.spec.js
 │
-├── tests/                  # All test specs (positive, negative, dynamic)
-│   ├── signup.positive.spec.js
-│   ├── signup.negative.spec.js
-│   └── signup.dynamicFields.spec.js
+├── pages/ # Page Object Model files
+│ ├── BasePage.js
+│ └── SignupPage.js
 │
-├── pages/                  # Page Object Model files
-│   ├── BasePage.js
-│   └── SignupPage.js
+├── utils/ # Utility functions and helpers
+│ └── helpers.js
 │
-├── .env                    # Contains BASE_URL
-├── playwright.config.js    # Playwright configuration
+├── .env # Contains BASE_URL
+├── playwright.config.js
 ├── package.json
-└── README.md               # You're here!
-```
+└── README.md 
 
 ## What’s Tested
 
@@ -40,26 +39,31 @@ id4me-assignment/
 
 ### Dynamic Behavior
 - Validates state/region dropdown behavior
-- Visibility checks for form fields
-- Checks form behavior on user interaction
 
 ### Cross-device Responsiveness
 - Tests run with both **desktop** and **mobile** viewports (375x667 for mobile)
 
+### Edge Cases
+- Checks the non numeric characters in phone number field
+- Checks if special characters are allowed in the email first part of the string
+
 ## Getting Started
 
+## Install Playwright
+```bash
+npm init playwright@latest
+```
 ### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Banumathy25/id4me-assignment.git
-cd id4meAutomationAssignment
+cd id4me-assignment
 ```
 
 ### 2. Install dependencies
 
 ```bash
 npm install
-npm init playwright@latest
 ```
 
 ### 3. Install Playwright browsers

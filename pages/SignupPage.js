@@ -26,6 +26,7 @@ exports.SignupPage = class SignupPage extends BasePage {
     this.agreement1 = this.frameLocator.locator('//span[text()="I agree to receive other communications from iD4me Find Main."]');
     this.agreement2 = this.frameLocator.locator('//*[text()="I agree to iD4me "]')
     this.alert_success = page.locator('.alert.alert-success');
+    this.email_spec = 'test+id4me#user@mycompany.com';
 
     this.defaultValues = {
       fname: helpers.generateRandomString(7),
@@ -226,5 +227,13 @@ exports.SignupPage = class SignupPage extends BasePage {
     }
     const phoneErrors = await this.getListErrorMessages();
     expect(phoneErrors).toContain('A valid phone number may only contain numbers, +()-. or x');
+  }
+
+  async specCharInEmail() {
+    await this.waitForVisible(this.email);
+    await this.email.fill(this.email_spec);
+    const list_errors = await this.getListErrorMessages();
+    await expect(list_errors).toHaveLength(0);
+
   }
 };
