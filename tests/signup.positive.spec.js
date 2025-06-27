@@ -6,10 +6,10 @@ The below id4me test will check the following positive scenarios:
 */
 
 
-import { test, expect } from '@playwright/test';
-import { SignupPage } from '../pages/SignupPage.js';
-import { BasePage } from '../pages/BasePage.js';
-import { SuccessPage } from '../pages/SuccessPage.js';
+const { test, expect } = require('@playwright/test');
+const { SignupPage } = require('../pages/SignupPage.js');
+const { BasePage } = require('../pages/BasePage.js');
+const { SuccessPage } = require('../pages/SuccessPage.js');
 require('dotenv').config();
 
 test.describe('Signup Form - Positive Scenarios', () => {
