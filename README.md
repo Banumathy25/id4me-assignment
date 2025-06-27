@@ -134,9 +134,12 @@ These are already used in `signup.dynamicFields.spec.js`.
 
 ## Assumptions
 
-- Validation errors appear immediately after field blur or submit.
-- Form is embedded inside an iframe and handled via `frameLocator`.
-- The error messages match static strings (e.g., `"Your passwords do not match"`).
+- Validation errors appear immediately after the user moves away from the field (blur) or submits the form.
+- The sign-up form is embedded inside an iframe, and all interactions are handled using Playwright’s frameLocator.
+- Error messages shown in the UI are consistent and exactly match the static strings used in tests (e.g., "Your passwords do not match").
+- Network and page load times are reasonable and don’t exceed configured timeouts.
+- Form fields have unique and stable selectors used in locators.
+- After successful submission, the user is redirected or shown a confirmation message.
 
 ## Known Limitations
 
