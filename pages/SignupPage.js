@@ -122,7 +122,14 @@ exports.SignupPage = class SignupPage extends BasePage {
       const text_val = await this.password_checks.nth(i).textContent();
       elements_array.push(text_val.trim());
     }
-    return elements_array;
+    const expected_checklist = [
+      "At least 8 characters",
+      "1 upper case",
+      "1 lower case",
+      "1 number",
+      "1 special character"
+    ];
+    expect(elements_array).toEqual(expected_checklist);
 
   }
 

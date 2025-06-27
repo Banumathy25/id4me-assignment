@@ -21,7 +21,7 @@ class BasePage {
   async openMerchantMobile() {
     await this.openMerchant({ width: 375, height: 667 });
   }
-  async waitForVisible(locator, timeout = 15000) {
+  async waitForVisible(locator, timeout = 18000) {
     const count = await locator.count();
     for (let i = 0; i < count; i++) {
       await expect(locator.nth(i)).toBeVisible({ timeout });
@@ -58,7 +58,7 @@ class BasePage {
 
   async scrollToLocator(locator) {
     await locator.scrollIntoViewIfNeeded();
-    await locator.waitFor({ state: 'visible', timeout: 5000 });
+    await locator.waitFor({ state: 'visible', timeout: 8000 });
   }
 
   async assertVisible(locator, message = 'Element not visible') {

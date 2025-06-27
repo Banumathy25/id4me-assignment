@@ -12,7 +12,7 @@ test.describe('Signup Form - Dynamic Field Behavior', () => {
     await basePage.openMerchant();
   });
   test('should update State/Region options after selecting a State', async ()=>{
-    await signupPage.checkStateFieldHidden(process.env.STATEFIELD);
+    await signupPage.checkStateFieldHidden('New South Wales (NSW)');
     console.log('it selects the state as expected');
   });
 });

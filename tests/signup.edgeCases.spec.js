@@ -13,6 +13,6 @@ test.describe('Signup Form - Dynamic Field Behavior', () => {
   });
   test('should update State/Region options after selecting a country', async ()=>{
     await signupPage.nonNumericCharsPhone();
-    console.log("Hence the id4me form is showing the message for n0n-numeric characters in phone");
+    console.log("Hence the id4me sign up form is showing the error message for n0n-numeric characters in phone");
   });
 });

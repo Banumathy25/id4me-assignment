@@ -14,13 +14,13 @@ test.describe('Signup Form - check mobile view ports and desktop viewports', () 
         await basePage.openMerchantMobile();
         await signupPage.fname.waitFor({ state: 'visible', timeout: 10000 });
         await signupPage.fillForm();
-        console.log("Hence the id4me form is filled on mobile view successfully");
+        console.log("Hence the id4me sign up form is filled on mobile view successfully");
     });
     test('should allow filling a few fields on desktop view', async () => {
         await basePage.openMerchantDesktop();
         await signupPage.fname.waitFor({ state: 'visible', timeout: 10000 });
         await signupPage.fillForm();
-        console.log("Hence the id4me form is filled on desktop view successfully");
+        console.log("Hence the id4me sign up form is filled on desktop view successfully");
     });
 
 })
