@@ -10,6 +10,7 @@ test.describe('Signup Form - check mobile view ports and desktop viewports', () 
         basePage = new BasePage(page);
         signupPage = new SignupPage(page);
         await basePage.openMerchantMobile();
+        await signupPage.fname.waitFor({ state: 'visible', timeout: 10000 });
     });
     test('should allow filling a few fields on mobile view', async () => {
         await signupPage.fillForm();

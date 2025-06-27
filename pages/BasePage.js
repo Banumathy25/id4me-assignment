@@ -1,4 +1,5 @@
 const { expect } = require('@playwright/test');
+require('dotenv').config();
 
 class BasePage {
   constructor(page) {
@@ -8,8 +9,9 @@ class BasePage {
   //   await this.page.goto(process.env.BASE_URL);
   // }
   async openMerchant(viewport = { width: 1920, height: 1080 }) {
-    await this.page.setViewportSize(viewport);
     await this.page.goto(process.env.BASE_URL);
+    await this.page.setViewportSize(viewport);
+
   }
 
   async openMerchantDesktop() {
