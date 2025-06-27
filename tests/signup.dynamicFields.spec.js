@@ -12,6 +12,6 @@ test.describe('Signup Form - Dynamic Field Behavior', () => {
     await basePage.openMerchant();
   });
   test('should update State/Region options after selecting a country', async ()=>{
-    await signupPage.checkStateFieldHidden('New South Wales (NSW)');
+    await signupPage.checkStateFieldHidden(process.env.STATEFIELD);
   });
 });
