@@ -37,33 +37,44 @@ It covers both positive and negative test cases, dynamic field behavior, and res
 ## Install node js
 this is the link: https://nodejs.org/en/download
 
+## Set path variables
+For windows: Add environment variable PATH - C:\Program Files\nodejs
+Open powershell as administrator and run the below command.
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+For MacOS: Nodejs gets installed in 
+```
+/usr/local/bin 
+```
+ check if it is there in the above path. Run node -v and npx -v and make sure you get the version as output.
+
 ## Install VS Code editor
 this is the link: https://code.visualstudio.com/download
 
-## Install Playwright
+### 1. Clone the repository
+Run the below command in iterm for Mac and powershell in Windows.
+```bash
+git clone https://github.com/Banumathy25/id4me-assignment.git
+```
+Launch VS Code editor and open the id4me-assignment folder.
+Open terminal in VS code editor and perform the following steps.
+
+### 2. Install Playwright
 ```bash
 npm init playwright@latest
 ```
-### 1. Clone the repository
+Note: It might prompt for the below options to select:
 
-```bash
-git clone https://github.com/Banumathy25/id4me-assignment.git
-cd id4me-assignment
-```
+√ Do you want to use TypeScript or JavaScript? · JavaScript
+√ Where to put your end-to-end tests? · e2e
+√ Add a GitHub Actions workflow? (y/N) · false
+? Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) » true
+√ <path in your laptop>\id4me-assignment\playwright.config.js already exists. Override it? (y/N) · false
+√ <path in your laptop>\id4me-assignment\e2e\example.spec.js already exists. Override it? (y/N) · false
+? <path in your laptop>\id4me-assignment\tests-examples\demo-todo-app.spec.js already exists. Override it? (y/N) » false
 
 ### 2. Install dependencies
 
-```bash
-npm install
-```
-
-### 3. Install Playwright browsers
-
-```bash
-npx playwright install
-```
-
-### 4. Set up Environment Variables
+### 3. Set up Environment Variables
 
 Create a `.env` file in the root folder by copying the contents from `.env.example`:
 
@@ -73,6 +84,7 @@ cp .env.example .env
 ```
 
 Then update the `.env` file as needed (for example, `BASE_URL`, `PASSWORD`).
+If a .env with the above is already existing please ignore this step.
 
 ## Running the Tests
 
