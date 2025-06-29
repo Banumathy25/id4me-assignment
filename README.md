@@ -69,13 +69,8 @@ npm init playwright@latest
 ```
 Note: It might prompt for the below options to select:
 
-√ Do you want to use TypeScript or JavaScript? · JavaScript
-√ Where to put your end-to-end tests? · e2e
-√ Add a GitHub Actions workflow? (y/N) · false
-? Install Playwright browsers (can be done manually via 'npx playwright install')? (Y/n) » true
-√ <path in your laptop>\id4me-assignment\playwright.config.js already exists. Override it? (y/N) · false
-√ <path in your laptop>\id4me-assignment\e2e\example.spec.js already exists. Override it? (y/N) · false
-? <path in your laptop>\id4me-assignment\tests-examples\demo-todo-app.spec.js already exists. Override it? (y/N) » false
+![image](https://github.com/user-attachments/assets/026feb37-54a2-4946-9122-f82588e90894)
+
 
 ### 2. Install dependencies
 
