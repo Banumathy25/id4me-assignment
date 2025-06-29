@@ -72,8 +72,6 @@ Note: It might prompt for the below options to select:
 ![image](https://github.com/user-attachments/assets/026feb37-54a2-4946-9122-f82588e90894)
 
 
-### 2. Install dependencies
-
 ### 3. Set up Environment Variables
 
 Create a `.env` file in the root folder by copying the contents from `.env.example`:
