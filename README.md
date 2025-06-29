@@ -34,6 +34,12 @@ It covers both positive and negative test cases, dynamic field behavior, and res
 
 ## Getting Started
 
+## Install node js
+this is the link: https://nodejs.org/en/download
+
+## Install VS Code editor
+this is the link: https://code.visualstudio.com/download
+
 ## Install Playwright
 ```bash
 npm init playwright@latest
