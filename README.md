@@ -38,9 +38,14 @@ It covers both positive and negative test cases, dynamic field behavior, and res
 this is the link: https://nodejs.org/en/download
 
 ## Set path variables
-For windows: Add environment variable PATH - C:\Program Files\nodejs
+For windows: Add environment variable PATH:
+```
+C:\Program Files\nodejs
+```
 Open powershell as administrator and run the below command.
-  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned
+```
 For MacOS: Nodejs gets installed in 
 ```
 /usr/local/bin 
